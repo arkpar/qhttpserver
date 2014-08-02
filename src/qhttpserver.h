@@ -81,7 +81,7 @@ public:
 
     /// Stop the server and listening for new connections.
     void close();
-signals:
+Q_SIGNALS:
     /// Emitted when a client makes a new request to the server.
     /** The slot should use the given @c request and @c response
         objects to communicate with the client.
@@ -90,7 +90,7 @@ signals:
                if connection is disconnected. */
     void newRequest(QHttpRequest *request, QHttpResponse *response);
 
-private slots:
+private Q_SLOTS:
     void newConnection();
 
 private:
