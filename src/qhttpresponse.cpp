@@ -49,7 +49,7 @@ QHttpResponse::~QHttpResponse()
 {
 }
 
-void QHttpResponse::setHeader(const QString &field, const QString &value)
+void QHttpResponse::addToHeader(const QString &field, const QString &value)
 {
     if (!m_finished)
         m_headers[field] = value;

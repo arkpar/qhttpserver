@@ -97,7 +97,7 @@ public Q_SLOTS:
         before calling writeHead(), write() or end().
         @param field Header field to be set.
         @param value Header value to be set. */
-    void setHeader(const QString &field, const QString &value);
+    void addToHeader(const QString &field, const QString &value);
 
     /// Writes the header section of the response
     /// using @c status as the response status code.
