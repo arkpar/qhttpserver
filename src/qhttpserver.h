@@ -85,8 +85,9 @@ signals:
     /// Emitted when a client makes a new request to the server.
     /** The slot should use the given @c request and @c response
         objects to communicate with the client.
-        @param request New incoming request.
-        @param response Response object to the request. */
+        @param request New incoming request. This object must be deleted manually after request processing.
+        @param response Response object to the request. Autodeleted after QHttpResponse::end() or
+               if connection is disconnected. */
     void newRequest(QHttpRequest *request, QHttpResponse *response);
 
 private slots:
