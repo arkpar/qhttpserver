@@ -41,6 +41,7 @@ public:
 
     void write(const QByteArray &data);
     void flush();
+    void waitForBytesWritten();
 
 Q_SIGNALS:
     void newRequest(QHttpRequest *, QHttpResponse *);
